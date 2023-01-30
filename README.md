@@ -19,10 +19,13 @@ For the categorical variables, we applied one-hot encoding to the data in order 
  ![image](https://user-images.githubusercontent.com/123222363/215431675-6216a5bf-8057-4f01-a1fd-49654ee6905e.png)
 
 - Silhouette Analysis
+
  ![image](https://user-images.githubusercontent.com/123222363/215431596-3b2b8f3a-a8de-4106-94fd-8da76d0a184d.png)
 
 And to reduce the dimensionality of the dataset we used Principal Component Analysis (PCA) for better interpretation & visualization, as shown in the graphic below
+
 ![image](https://user-images.githubusercontent.com/123222363/215432363-06977188-c8df-4fda-9b7b-3aa49ab45dda.png)
 
 From above analysis, we could say that the users could be divided into 8 cluster that we could summarize it based on the variable that distinguised them, i.e day category (weekdays and weekend)
+
 ![image](https://user-images.githubusercontent.com/123222363/215432845-cda7d495-7aca-4276-a8dd-b3c8abd84b95.png)
