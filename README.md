@@ -19,7 +19,7 @@ Data Preparation, Outlier and Null Cleaning are fully done with Python (Google C
 In order to find any trends or patterns, we did Exploratory Data Analysis (EDA) using Google Colaboratory which consist of analysis based on the distance, based on the time, based on month & days of the orders.
 ## Data Analysis & Visualization
 ### Customer Segmentation
-To segment the users, we used cluster analysis using Elbow Method and Silhouette Analysis. The variables we included in the analysis are total fare, number of passangers, distance, and days of the orders.
+To segment the users, we used K-means clustering using Elbow Method and Silhouette Analysis. The variables we included in the analysis are total fare, number of passangers, distance, and days of the orders.
 For the categorical variables, we applied one-hot encoding to the data in order to convert it to numerical data. Thus, we can do clustering analysis.
 - Elbow Method
  ![image](https://user-images.githubusercontent.com/123222363/215431675-6216a5bf-8057-4f01-a1fd-49654ee6905e.png)
@@ -83,13 +83,14 @@ Here, the suggested campaign based on the cluster grouping above,
 We also created a dashboard of this project with Tableau https://public.tableau.com/app/profile/cessa.mutiara.aziz/viz/shared/BYS6Z2QZQ
 ## Forecasting Analysis - Expected Outcome
 For the expected outcome of the suggested campaign, we used forecasting analysis with Prophet method since it works best with time series that have strong seasonal effects and several seasons of historical data. Also it is robust to missing data and shifts in the trend, and typically handles outliers well.
+
 As we know, since the trend has down trend, so it does the forecasting for the some times in the future as shown in the graph belows:
 
 ![image](https://user-images.githubusercontent.com/123222363/216220139-3d7dc088-59b7-4d0c-b0c7-4051dd59b5df.png)
 
-So, to create an expected outcome if Uber can successfully implement the campaign, we decided to create a new data that the number of orders has been increased by 35% in the 2nd Semester of 2015 (from the result of the forecasting) to give a total increase ~ 3% in 1 year (2015).
+Thus, to create an expected outcome if Uber can successfully implement the campaign, we decided to create a new data that the number of orders has been increased by 35% in the 2nd Semester of 2015 (from the result of the forecasting) to give a total increase ~ 3% in 1 year (2015).
 
 ![image](https://user-images.githubusercontent.com/123222363/216225284-92ce9e8d-7235-41e3-87d5-18682dee58a8.png)
 
 ## Further Analysis
-The analysis can be more comprehensive, if we have revenue and cost data to do profit analysis and we can do a more detail & targeted of customer segmentation analysis if we can access more information of the users.
+The analysis can be more comprehensive if we have revenue and cost data to do profit analysis and we can do a more detail & targeted of customer segmentation analysis if we can access more information of the users.
