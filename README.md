@@ -1,13 +1,16 @@
 # Summary
 This project was a group final project of Data Analytics Boot Camp which focused on how to increase Uber's order growth in 2015 by creating campaign suggestion using cluster analysis.
 The dataset contains Uber Inc's order data in New York City from January 2009 - June 2015.
-We found that orders were having down trend from 2012, and from that trend we aimed to increase the orders by creating customer segmentation using cluster analysis (Silhouette & Elbow Method) and to reduce the dimensionality of the dataset we used Principal Component Analysis (PCA) for better interpretation & visualization. On top of that, we created the suggested campaign to each customer segmentation, also created the prediction of the order increase using Timeseries-Analysis Prophet if Uber manages to execute the campaigns successfully. Finally, we created a dashboard for reporting of each metrics and important variables using Tableau
+We found that orders were having down trend from 2012, and from that trend we aimed to increase the orders by creating customer segmentation using K-means clustering analysis (Silhouette & Elbow Method) and to reduce the dimensionality of the dataset we used Principal Component Analysis (PCA) for better interpretation & visualization. On top of that, we created the suggested campaign to each customer segmentation, also created the prediction of the order increase using Timeseries-Analysis Prophet if Uber manages to execute the campaigns successfully. Finally, we created a dashboard for reporting of each metrics and important variables using Tableau
 # Dataset
 The Dataset used was Uber Inc Order's data in New York City from January 2009 to June 2015 (200,000 orders/transactions)
 
 Data Features consist of order id, fare of each trip, pickup datetime, passenger count, and coordinates of pickup and drop off location.
 # Project Goals
-How to increase Uber’s order growth by 3% within a year from 2014? (masukin tableau graph)
+How to increase Uber’s order growth by 3% within a year from 2014?
+
+![image](https://user-images.githubusercontent.com/123222363/216353887-049d0b4a-8563-4150-a977-1509e0a9b92e.png)
+
 
 For the project purpose, 2015 would become the year that Uber should implement the suggested campaign, since we only had the data from January - June, the campaign focused on how to increase the orders in July - December, so Uber could increase ~ 3% of the total orders in 2015
 # Methodology
@@ -35,15 +38,43 @@ From above analysis, we could say that the users could be divided into 8 cluster
 
 ### Campaign Suggestion
 Since the cluster was considered too many to be applied campaign suggestion, We analyzed some variables that we could find the simmilarity among the 8 clusters:
-1. The day category of the trips (insert grap tableau)
-2. The peak hours of each day category (insert grap tableau)
-3. Average order value (AOV) (insert grap tableau)
-4. The distance average (insert grap tableau)
-5. The passanger average (insert grap tableau)
-We could narrowed the cluster into 3 groups for the campaign suggestion purposes,
+1. The day category of the trips
+Total trips in each cluster shows that uber is dominated by user who like to go trips in weekdays (typically it is routine activities).
+
+![image](https://user-images.githubusercontent.com/123222363/216354235-8d0edf24-23be-4ab6-8733-03ba63e1c71b.png)
+
+2. The peak hours of each day category
+
+The peak hours in weekdays
+
+![image](https://user-images.githubusercontent.com/123222363/216355804-85df7ced-d656-4eb0-8557-d9a77828e767.png)
+
+The peak hours in weekend
+
+![image](https://user-images.githubusercontent.com/123222363/216354565-b76bae9c-8503-41be-95ce-3b1769ccb8fe.png)
+
+3. Average order value (AOV)
+All clusters have the same average trip value (~USD 10), except for cluster 4 & 5 which have slightly higher value than the others.
+
+![image](https://user-images.githubusercontent.com/123222363/216354660-00d4dc10-e902-495d-9899-cf009cdfdd1d.png)
+
+
+4. The average of distance
+All cluster have the same distance level (near level <= 5 KM) and the average is ~3 KM, except for cluster 4 & 5.
+
+![image](https://user-images.githubusercontent.com/123222363/216354729-f22cfcb1-9526-476f-8e51-b1272750c57c.png)
+
+
+5. The average of passenger
+All clusters have the same average of total passenger (~2). This is correlated with the type of uber that user might be ordered.
+
+![image](https://user-images.githubusercontent.com/123222363/216354889-703f116d-31ad-4f18-a96a-f3deba28b653.png)
+
+
+We could narrowed the cluster into 3 groups for the campaign suggestion purposes based on above analysis,
 
 ![image](https://user-images.githubusercontent.com/123222363/216217409-b2bed330-ea25-4e74-81c3-c2a8cabea5f0.png)
-We decided not to focus on Cluster 0 & Cluster 7, as the user is considered small number and we could focus on increasing number of orders in the rest of clusters.
+
 Here, the suggested campaign based on the cluster grouping above,
 
 ![image](https://user-images.githubusercontent.com/123222363/216218029-70625183-b500-488e-addc-059ea6308e4e.png)
