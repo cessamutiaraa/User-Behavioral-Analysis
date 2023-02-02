@@ -7,6 +7,7 @@ The Dataset used was Uber Inc Order's data in New York City from January 2009 to
 Data Features consist of order id, fare of each trip, pickup datetime, passenger count, and coordinates of pickup and drop off location.
 # Project Goals
 How to increase Uber’s order growth by 3% within a year from 2014? (masukin tableau graph)
+For the project purpose, 2015 would become the year that Uber should implement the suggested campaign, since we only had the data from January - June, the campaign focused on how to increase the orders in July - December, so Uber could increase ~ 3% of the total orders in 2015
 # Methodology
 ## Data Preparation & Cleaning
 Data Preparation, Outlier and Null Cleaning are fully done with Python (Google Colaboratory).
@@ -45,12 +46,17 @@ Here, the suggested campaign based on the cluster grouping above,
 
 ![image](https://user-images.githubusercontent.com/123222363/216218029-70625183-b500-488e-addc-059ea6308e4e.png)
 
+
 We also created a dashboard of this project with Tableau https://public.tableau.com/app/profile/cessa.mutiara.aziz/viz/shared/BYS6Z2QZQ
-## Forecasting Analysis
-We used Prophet method as it works best with time series that have strong seasonal effects and several seasons of historical data. Also it is robust to missing data and shifts in the trend, and typically handles outliers well.
+## Forecasting Analysis - Expected Outcome
+For the expected outcome of the suggested campaign, we used forecasting analysis with Prophet method since it works best with time series that have strong seasonal effects and several seasons of historical data. Also it is robust to missing data and shifts in the trend, and typically handles outliers well.
 As we know, since the trend has down trend, so it does the forecasting for the some times in the future as shown in the graph belows:
 
 ![image](https://user-images.githubusercontent.com/123222363/216220139-3d7dc088-59b7-4d0c-b0c7-4051dd59b5df.png)
 
-So, to create a forecating if Uber can successfully implement the campaign, we decided to create a new data that the number of orders has been increased by 3
-By executing the campaign, Uber may have a chance to increase the number of orders by 3% in 
+So, to create an expected outcome if Uber can successfully implement the campaign, we decided to create a new data that the number of orders has been increased by 35% in the 2nd Semester of 2015 (from the result of the forecasting) to give a total increase ~ 3% in 1 year (2015).
+
+![image](https://user-images.githubusercontent.com/123222363/216225284-92ce9e8d-7235-41e3-87d5-18682dee58a8.png)
+
+## Further Analysis
+The analysis can be more comprehensive, if we have revenue and cost data to do profit analysis and we can do a more detail & targeted of customer segmentation analysis if we can access more information of the users.
