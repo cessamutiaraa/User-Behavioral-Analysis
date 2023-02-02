@@ -6,7 +6,7 @@ We found that orders were having down trend from 2012, and from that trend we ai
 The Dataset used was Uber Inc Order's data in New York City from January 2009 to June 2015 (200,000 orders/transactions)
 Data Features consist of order id, fare of each trip, pickup datetime, passenger count, and coordinates of pickup and drop off location.
 # Project Goals
-How to increase Uber’s order growth by 3% within a year from 2014?
+How to increase Uber’s order growth by 3% within a year from 2014? (masukin tableau graph)
 # Methodology
 ## Data Preparation & Cleaning
 Data Preparation, Outlier and Null Cleaning are fully done with Python (Google Colaboratory).
@@ -26,6 +26,31 @@ And to reduce the dimensionality of the dataset we used Principal Component Anal
 
 ![image](https://user-images.githubusercontent.com/123222363/215432363-06977188-c8df-4fda-9b7b-3aa49ab45dda.png)
 
-From above analysis, we could say that the users could be divided into 8 cluster that we could summarize it based on the variable that distinguised them, i.e day category (weekdays and weekend)
+From above analysis, we could say that the users could be divided into 8 clusters that we could summarize it based on the variable that distinguised them, i.e day category (weekdays and weekend)
 
 ![image](https://user-images.githubusercontent.com/123222363/215432845-cda7d495-7aca-4276-a8dd-b3c8abd84b95.png)
+
+### Campaign Suggestion
+Since the cluster was considered too many to be applied campaign suggestion, We analyzed some variables that we could find the simmilarity among the 8 clusters:
+1. The day category of the trips (insert grap tableau)
+2. The peak hours of each day category (insert grap tableau)
+3. Average order value (AOV) (insert grap tableau)
+4. The distance average (insert grap tableau)
+5. The passanger average (insert grap tableau)
+We could narrowed the cluster into 3 groups for the campaign suggestion purposes,
+
+![image](https://user-images.githubusercontent.com/123222363/216217409-b2bed330-ea25-4e74-81c3-c2a8cabea5f0.png)
+We decided not to focus on Cluster 0 & Cluster 7, as the user is considered small number and we could focus on increasing number of orders in the rest of clusters.
+Here, the suggested campaign based on the cluster grouping above,
+
+![image](https://user-images.githubusercontent.com/123222363/216218029-70625183-b500-488e-addc-059ea6308e4e.png)
+
+We also created a dashboard of this project with Tableau https://public.tableau.com/app/profile/cessa.mutiara.aziz/viz/shared/BYS6Z2QZQ
+## Forecasting Analysis
+We used Prophet method as it works best with time series that have strong seasonal effects and several seasons of historical data. Also it is robust to missing data and shifts in the trend, and typically handles outliers well.
+As we know, since the trend has down trend, so it does the forecasting for the some times in the future as shown in the graph belows:
+
+![image](https://user-images.githubusercontent.com/123222363/216220139-3d7dc088-59b7-4d0c-b0c7-4051dd59b5df.png)
+
+So, to create a forecating if Uber can successfully implement the campaign, we decided to create a new data that the number of orders has been increased by 3
+By executing the campaign, Uber may have a chance to increase the number of orders by 3% in 
