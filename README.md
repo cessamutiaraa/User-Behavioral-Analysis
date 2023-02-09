@@ -79,7 +79,12 @@ Here, the suggested campaign based on the cluster grouping above,
 ![image](https://user-images.githubusercontent.com/123222363/216218029-70625183-b500-488e-addc-059ea6308e4e.png)
 
 
+### Dashboard
 We also created a dashboard of this project with Tableau https://public.tableau.com/app/profile/cessa.mutiara.aziz/viz/shared/BYS6Z2QZQ
+
+<img width="387" alt="image" src="https://user-images.githubusercontent.com/123222363/217935121-44890791-27ba-4c80-81ef-4d70a026997d.png">
+
+
 ## Forecasting Analysis - Expected Outcome
 For the expected outcome of the suggested campaign, we used forecasting analysis with Prophet method since it works best with time series that have strong seasonal effects and several seasons of historical data. Also it is robust to missing data and shifts in the trend, and typically handles outliers well.
 
